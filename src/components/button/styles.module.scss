@@ -1,0 +1,74 @@
+@mixin button {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0.5rem 1.75rem;
+
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  text-align: center;
+  text-decoration: none;
+
+  border: none;
+  border-radius: 2rem;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.primary {
+  @include button;
+
+  color: var(--button-primary-color);
+
+  background-color: var(--button-primary-bg);
+  box-shadow: var(--button-primary-shadow);
+
+  &:hover,
+  &:focus {
+    background-color: var(--button-primary-bg-hover);
+  }
+
+  &:active {
+    background-color: var(--button-primary-bg-active);
+  }
+}
+
+.secondary {
+  @include button;
+
+  color: var(--button-secondary-color);
+
+  background-color: var(--button-secondary-bg);
+  box-shadow: var(--button-secondary-shadow);
+
+  &:hover,
+  &:focus {
+    background-color: var(--button-secondary-bg-hover);
+  }
+
+  &:active {
+    background-color: var(--button-secondary-bg-active);
+  }
+}
+
+.outlined {
+  @include button;
+
+  color: var(--button-outlined-color);
+
+  background-color: var(--button-outlined-bg);
+  box-shadow: var(--button-outlined-shadow);
+
+  &:hover,
+  &:focus {
+    background-color: var(--button-outlined-bg-hover);
+  }
+
+  &:active {
+    background-color: var(--button-outlined-bg-active);
+  }
+}

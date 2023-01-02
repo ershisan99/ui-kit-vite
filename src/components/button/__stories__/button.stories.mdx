@@ -1,0 +1,16 @@
+import {ArgsTable, Canvas, Meta, Story} from '@storybook/addon-docs';
+import {Button} from "../index.tsx";
+
+<Meta title="Button" component={Button}/>
+
+<ArgsTable of={Button} />
+
+<Canvas>
+    <Story name="usage">
+        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-around'}}>
+            <Button>Primary</Button>
+            <Button variant={'secondary'}>Secondary</Button>
+            <Button variant={'outlined'}>Outlined</Button>
+        </div>
+    </Story>
+</Canvas>
